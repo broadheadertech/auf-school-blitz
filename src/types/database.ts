@@ -1,4 +1,4 @@
-// UniPortal Database Types
+// ASU Portal Database Types
 // Manual types for auth tables (Story 1.2)
 // Will be replaced by `supabase gen types typescript` output when full schema is ready
 

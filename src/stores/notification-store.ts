@@ -110,7 +110,7 @@ function createMockNotifications(): Notification[] {
       type: 'system_announcement',
       priority: 'info',
       title: 'System maintenance notice',
-      body: 'UniPortal will undergo scheduled maintenance on March 22, 2026 from 2:00-4:00 AM.',
+      body: 'ASU Portal will undergo scheduled maintenance on March 22, 2026 from 2:00-4:00 AM.',
       action_url: null,
       read: true,
       dismissed: false,

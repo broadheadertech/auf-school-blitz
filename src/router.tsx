@@ -41,6 +41,11 @@ const StudyGroupsPage = lazy(() => import('@/pages/study-groups'))
 const LostFoundPage = lazy(() => import('@/pages/lost-found'))
 const LeaderboardPage = lazy(() => import('@/pages/leaderboard'))
 const CampusMapPage = lazy(() => import('@/pages/campus-map'))
+const HomePage = lazy(() => import('@/pages/home'))
+const AboutPage = lazy(() => import('@/pages/home/about'))
+const AcademicsPage = lazy(() => import('@/pages/home/academics'))
+const AdmissionsPage = lazy(() => import('@/pages/home/admissions'))
+const PublicNewsPage = lazy(() => import('@/pages/home/news'))
 
 function PageSkeleton() {
   return (
@@ -209,6 +214,46 @@ function RoleGuard({ allowedRoles }: { allowedRoles: UserRole[] }) {
 
 export const router = createBrowserRouter([
   {
+    path: '/',
+    element: (
+      <LazyPage>
+        <HomePage />
+      </LazyPage>
+    ),
+  },
+  {
+    path: '/about',
+    element: (
+      <LazyPage>
+        <AboutPage />
+      </LazyPage>
+    ),
+  },
+  {
+    path: '/academics',
+    element: (
+      <LazyPage>
+        <AcademicsPage />
+      </LazyPage>
+    ),
+  },
+  {
+    path: '/admissions',
+    element: (
+      <LazyPage>
+        <AdmissionsPage />
+      </LazyPage>
+    ),
+  },
+  {
+    path: '/public/news',
+    element: (
+      <LazyPage>
+        <PublicNewsPage />
+      </LazyPage>
+    ),
+  },
+  {
     path: '/auth/callback',
     element: <AuthCallback />,
   },
@@ -268,14 +313,6 @@ export const router = createBrowserRouter([
           {
             element: <PageLayout />,
             children: [
-              {
-                path: '/',
-                element: (
-                  <LazyPage>
-                    <DashboardPage />
-                  </LazyPage>
-                ),
-              },
               {
                 path: '/dashboard',
                 element: (

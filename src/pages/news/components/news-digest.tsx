@@ -11,7 +11,7 @@ interface DigestBullet {
 const MOCK_DIGEST: { date: string; bullets: DigestBullet[] } = {
   date: '2026-03-18',
   bullets: [
-    { summary: 'UniPortal launches a new schedule-first enrollment system that eliminates time conflicts automatically.', articleId: 'n01', articleTitle: 'UniPortal Launches New Online Enrollment System' },
+    { summary: 'ASU Portal launches a new schedule-first enrollment system that eliminates time conflicts automatically.', articleId: 'n01', articleTitle: 'ASU Portal Launches New Online Enrollment System' },
     { summary: 'Midterm exams are scheduled for March 25-29 — students should check their exam schedules and bring IDs.', articleId: 'n02', articleTitle: 'Midterm Examination Schedule Released' },
     { summary: 'The tuition payment deadline has been extended to March 31 to give students more time.', articleId: 'n03', articleTitle: 'Payment Deadline Extended to March 31' },
   ],

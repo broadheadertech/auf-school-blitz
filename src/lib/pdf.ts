@@ -68,12 +68,12 @@ export function generateGradeReportPdf({
   doc.setFillColor(goldRgb[0], goldRgb[1], goldRgb[2])
   doc.rect(0, 35, pageWidth, 2, 'F')
 
-  // UniPortal text
+  // ASU Portal text
   const whiteRgb = hexToRgb(WHITE)
   doc.setTextColor(whiteRgb[0], whiteRgb[1], whiteRgb[2])
   doc.setFontSize(22)
   doc.setFont('helvetica', 'bold')
-  doc.text('UniPortal', 15, 18)
+  doc.text('ASU Portal', 15, 18)
 
   doc.setFontSize(11)
   doc.setFont('helvetica', 'normal')
@@ -233,14 +233,14 @@ export function generateGradeReportPdf({
   doc.setFontSize(8)
   doc.setTextColor(secRgb[0], secRgb[1], secRgb[2])
   doc.text(
-    'This is an unofficial grade report generated from UniPortal. For official records, contact the Registrar.',
+    'This is an unofficial grade report generated from ASU Portal. For official records, contact the Registrar.',
     pageWidth / 2,
     285,
     { align: 'center' },
   )
 
   // Download
-  const fileName = `UniPortal_Grade_Report_${student.studentNumber}_${new Date().toISOString().slice(0, 10)}.pdf`
+  const fileName = `ASU Portal_Grade_Report_${student.studentNumber}_${new Date().toISOString().slice(0, 10)}.pdf`
   doc.save(fileName)
 }
 

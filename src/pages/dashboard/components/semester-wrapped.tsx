@@ -107,7 +107,7 @@ function WrappedCard({ data, onClose }: { data: WrappedData; onClose?: () => voi
           <p className="text-xs text-white/40">{data.totalUnits} units completed</p>
         </div>
 
-        <p className="mt-4 text-center text-[10px] text-white/30">UniPortal</p>
+        <p className="mt-4 text-center text-[10px] text-white/30">ASU Portal</p>
       </div>
 
       {/* Share actions */}

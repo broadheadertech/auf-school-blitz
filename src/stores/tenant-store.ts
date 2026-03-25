@@ -13,7 +13,7 @@ export interface TenantConfig {
 
 const DEFAULT_TENANT: TenantConfig = {
   id: 'default',
-  name: 'UniPortal Demo University',
+  name: 'ASU Portal Demo University',
   slug: 'demo',
   logoUrl: null,
   primaryColor: '#0D1B3E',

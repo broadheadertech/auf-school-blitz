@@ -67,7 +67,7 @@ function generateCurriculumPdf(
   doc.setTextColor(whiteRgb[0], whiteRgb[1], whiteRgb[2])
   doc.setFontSize(18)
   doc.setFont('helvetica', 'bold')
-  doc.text('UniPortal', 15, 15)
+  doc.text('ASU Portal', 15, 15)
   doc.setFontSize(10)
   doc.setFont('helvetica', 'normal')
   doc.text(`Curriculum Checklist — ${programCode}`, 15, 23)
@@ -141,10 +141,10 @@ function generateCurriculumPdf(
   doc.setFontSize(7)
   doc.setTextColor(128, 128, 128)
   doc.text(
-    'Generated from UniPortal. This is an unofficial document — contact the Registrar for official records.',
+    'Generated from ASU Portal. This is an unofficial document — contact the Registrar for official records.',
     pageWidth / 2, 285,
     { align: 'center' },
   )
 
-  doc.save(`UniPortal_Curriculum_${programCode}_${new Date().toISOString().slice(0, 10)}.pdf`)
+  doc.save(`ASU Portal_Curriculum_${programCode}_${new Date().toISOString().slice(0, 10)}.pdf`)
 }

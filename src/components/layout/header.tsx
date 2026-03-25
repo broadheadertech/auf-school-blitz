@@ -47,7 +47,7 @@ export function Header() {
       <div className="flex items-center gap-2 xl:hidden">
         <GraduationCap className="h-7 w-7 text-[var(--color-accent)]" />
         <span className="font-display text-base font-bold text-[var(--color-primary)]">
-          UniPortal
+          ASU Portal
         </span>
       </div>
 

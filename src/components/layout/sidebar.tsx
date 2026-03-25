@@ -99,7 +99,7 @@ export function Sidebar() {
     >
       <div className="flex items-center gap-2 px-4 py-5 border-b border-white/10">
         <GraduationCap className="h-8 w-8 text-[var(--color-accent)]" />
-        <span className="font-display text-lg font-bold">UniPortal</span>
+        <span className="font-display text-lg font-bold">ASU Portal</span>
       </div>
 
       <div className="flex-1 flex flex-col gap-1 px-2 py-3">

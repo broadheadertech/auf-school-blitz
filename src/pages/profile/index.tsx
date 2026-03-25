@@ -148,7 +148,7 @@ export default function ProfilePage() {
           </div>
           <div className="rounded-[var(--radius-md)] bg-[var(--color-bg)] p-3">
             <p className="text-xs text-[var(--color-text-secondary)]">
-              UniPortal is designed to be keyboard-navigable. Use Tab to move between elements, Enter/Space to activate, and Escape to close dialogs.
+              ASU Portal is designed to be keyboard-navigable. Use Tab to move between elements, Enter/Space to activate, and Escape to close dialogs.
             </p>
           </div>
         </div>

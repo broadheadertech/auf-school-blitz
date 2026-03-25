@@ -242,7 +242,7 @@ export default function OnboardingPage() {
         <div className="mx-auto max-w-2xl">
           <div className="mb-4 text-center">
             <h1 className="font-heading text-lg font-bold text-[var(--color-primary)]">
-              Welcome to UniPortal
+              Welcome to ASU Portal
             </h1>
             <p className="text-xs text-[var(--color-text-muted)]">
               Step {currentStep} of 3

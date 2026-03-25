@@ -42,7 +42,7 @@ export function FinancialAidExport({ fees, payments }: FinancialAidExportProps) 
         doc.setTextColor(whiteRgb[0], whiteRgb[1], whiteRgb[2])
         doc.setFontSize(18)
         doc.setFont('helvetica', 'bold')
-        doc.text('UniPortal', 15, 15)
+        doc.text('ASU Portal', 15, 15)
         doc.setFontSize(10)
         doc.setFont('helvetica', 'normal')
         doc.text('Financial Aid Evidence', 15, 23)
@@ -128,11 +128,11 @@ export function FinancialAidExport({ fees, payments }: FinancialAidExportProps) 
         doc.setFontSize(7)
         doc.setTextColor(128, 128, 128)
         doc.text(
-          'Generated from UniPortal for financial aid purposes. Contact the Registrar for official certification.',
+          'Generated from ASU Portal for financial aid purposes. Contact the Registrar for official certification.',
           pageWidth / 2, 285, { align: 'center' },
         )
 
-        doc.save(`UniPortal_Financial_Aid_Evidence_${new Date().toISOString().slice(0, 10)}.pdf`)
+        doc.save(`ASU Portal_Financial_Aid_Evidence_${new Date().toISOString().slice(0, 10)}.pdf`)
       } catch { /* */ } finally {
         setLoading(false)
       }

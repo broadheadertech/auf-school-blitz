@@ -48,7 +48,7 @@ export function ShareGradeCard({ gwa, semester, academicYear, program, studentNa
               className="mb-4 overflow-hidden rounded-[var(--radius-lg)] bg-gradient-to-br from-[#0D1B3E] to-[#1A2D5A] p-6 text-white shadow-lg"
             >
               <div className="mb-4 flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-wider text-white/60">UniPortal</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-white/60">ASU Portal</span>
                 <QrCode className="h-8 w-8 text-[#F5A623]" />
               </div>
               <p className="text-sm text-white/70">{studentName}</p>
