@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angeles State University — System Presentation</title>
+<title>Angeles University Foundation — System Presentation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#050A18;--surface:rgba(255,255,255,0.03);--border:rgba(255,255,255,0.06);
-  --gold:#F5A623;--gold-glow:rgba(245,166,35,0.15);
+  --gold:#C8A415;--gold-glow:rgba(245,166,35,0.15);
   --blue:#3B82F6;--purple:#8B5CF6;--green:#22C55E;--pink:#EC4899;--cyan:#06B6D4;--orange:#F97316;
   --text:#F1F5F9;--text-dim:#64748B;--text-muted:#334155;
 }
@@ -60,6 +60,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .role-s{background:rgba(59,130,246,0.1);color:#93C5FD;border:1px solid rgba(59,130,246,0.2)}
 .role-f{background:rgba(139,92,246,0.1);color:#C4B5FD;border:1px solid rgba(139,92,246,0.2)}
 .role-a{background:rgba(34,197,94,0.1);color:#86EFAC;border:1px solid rgba(34,197,94,0.2)}
+.role-p{background:rgba(245,166,35,0.1);color:#FFD280;border:1px solid rgba(245,166,35,0.2)}
 
 /* Stats */
 .stats{display:flex;gap:40px;margin-top:28px}
@@ -70,6 +71,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .grid{display:grid;gap:10px;width:100%;max-width:1060px;margin-top:20px}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 .grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-5{grid-template-columns:repeat(5,1fr)}
 
 .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;transition:all 0.3s;position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent)}
@@ -80,11 +82,11 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 .card p{font-size:11.5px;color:var(--text-dim);line-height:1.55}
 
 /* Overview cards */
-.o-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;transition:all 0.3s}
+.o-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 12px;text-align:center;transition:all 0.3s}
 .o-card:hover{border-color:rgba(245,166,35,0.2);transform:translateY(-2px)}
-.o-card .ico{font-size:28px;margin-bottom:10px;display:block}
-.o-card h3{font-family:'Inter';font-size:13px;font-weight:700;margin-bottom:3px}
-.o-card p{font-size:11px;color:var(--text-dim)}
+.o-card .ico{font-size:24px;margin-bottom:8px;display:block}
+.o-card h3{font-family:'Inter';font-size:12px;font-weight:700;margin-bottom:2px}
+.o-card p{font-size:10px;color:var(--text-dim)}
 
 /* Tech cards */
 .t-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center}
@@ -105,7 +107,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 /* Logo */
 .logo{display:flex;align-items:center;gap:14px;margin-bottom:28px}
 .logo-mark{width:52px;height:52px;background:linear-gradient(135deg,var(--gold),#FFD280);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 8px 24px rgba(245,166,35,0.2)}
-.logo-name{font-family:'Playfair Display';font-size:26px;font-weight:800;letter-spacing:-0.5px}
+.logo-name{font-family:'Space Grotesk';font-size:26px;font-weight:800;letter-spacing:-0.5px}
 
 /* Keyboard hint */
 .hint{position:fixed;top:16px;right:32px;z-index:100;font-size:10px;color:var(--text-muted);display:flex;align-items:center;gap:6px}
@@ -135,24 +137,39 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
 
 <!-- ══════════ 1. TITLE ══════════ -->
 <div class="slide active" data-slide="0">
-  <div class="logo a"><div class="logo-mark">🎓</div><div class="logo-name">Angeles State University</div></div>
-  <div class="chip a d1">University Information & Student Portal</div>
+  <div class="logo a"><div class="logo-mark">🎓</div><div class="logo-name">Angeles University Foundation</div></div>
+  <div class="chip a d1">Student Portal System</div>
   <h1 class="hero-title a d2">The Modern<br><span class="accent">University Portal</span></h1>
   <p class="sub-text a d3">A complete web application for students, faculty, and administrators — built for a Philippine-based university.</p>
   <div class="stats a d4">
-    <div><div class="stat-n">40+</div><div class="stat-l">Features</div></div>
-    <div><div class="stat-n">3</div><div class="stat-l">Roles</div></div>
-    <div><div class="stat-n">20+</div><div class="stat-l">Pages</div></div>
-    <div><div class="stat-n">25+</div><div class="stat-l">Tables</div></div>
+    <div><div class="stat-n">60+</div><div class="stat-l">Features</div></div>
+    <div><div class="stat-n">4</div><div class="stat-l">User Roles</div></div>
+    <div><div class="stat-n">30+</div><div class="stat-l">Pages</div></div>
+    <div><div class="stat-n">25+</div><div class="stat-l">DB Tables</div></div>
   </div>
 </div>
 
-<!-- ══════════ 2. OVERVIEW ══════════ -->
+<!-- ══════════ 2. PUBLIC WEBSITE ══════════ -->
 <div class="slide" data-slide="1">
+  <div class="role role-p a">🌐 Public Website</div>
+  <h2 class="section-title a d1">University Website</h2>
+  <p class="section-desc a d2">A full public-facing website — accessible without login. Showcases the university to prospective students and visitors.</p>
+  <div class="grid grid-3 a d3">
+    <div class="card"><div class="card-icon" style="background:rgba(245,166,35,0.1)">🏠</div><h3>Homepage</h3><p>Hero carousel with auto-rotate. Quick links, stats bar, featured news, program showcase, events list, enrollment CTA.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(59,130,246,0.1)">ℹ️</div><h3>About Page</h3><p>Mission, Vision, Values cards. University history timeline. Leadership section. Campus facilities grid.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(139,92,246,0.1)">📚</div><h3>Academics Page</h3><p>Live from database — college tabs, programs with curriculum map, subject directory with search.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(34,197,94,0.1)">🎓</div><h3>Admissions Page</h3><p>5-step admission timeline. Requirements checklist. Tuition info. Scholarships. FAQ accordion.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(236,72,153,0.1)">📰</div><h3>News & Events Page</h3><p>Live from database — featured articles, category filters, search, full article view, events sidebar.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(6,182,212,0.1)">🔗</div><h3>Consistent Navigation</h3><p>Sticky navbar with links to all pages. Footer with contact info, quick links, and social media.</p></div>
+  </div>
+</div>
+
+<!-- ══════════ 3. OVERVIEW ══════════ -->
+<div class="slide" data-slide="2">
   <div class="section-chip a">System Overview</div>
   <h2 class="section-title a d1">Core Modules</h2>
   <p class="section-desc a d2">Every module is connected to a live Supabase database with role-based access and real-time updates.</p>
-  <div class="grid grid-4 a d3">
+  <div class="grid grid-5 a d3">
     <div class="o-card"><span class="ico">📊</span><h3>Dashboard</h3><p>Role-specific widgets</p></div>
     <div class="o-card"><span class="ico">📝</span><h3>Grades</h3><p>View, submit & GWA</p></div>
     <div class="o-card"><span class="ico">📚</span><h3>Curriculum</h3><p>Degree flowchart</p></div>
@@ -163,13 +180,16 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
     <div class="o-card"><span class="ico">💬</span><h3>Chat</h3><p>Realtime messaging</p></div>
     <div class="o-card"><span class="ico">📄</span><h3>Documents</h3><p>Transcripts & certs</p></div>
     <div class="o-card"><span class="ico">✅</span><h3>Clearance</h3><p>Digital checklist</p></div>
+    <div class="o-card"><span class="ico">📅</span><h3>Schedule</h3><p>Weekly timetable</p></div>
+    <div class="o-card"><span class="ico">🧮</span><h3>GPA Calc</h3><p>Target grade tool</p></div>
+    <div class="o-card"><span class="ico">✋</span><h3>Attendance</h3><p>Per-session tracking</p></div>
     <div class="o-card"><span class="ico">🏆</span><h3>Leaderboard</h3><p>GWA rankings</p></div>
     <div class="o-card"><span class="ico">🔍</span><h3>Search</h3><p>Global Ctrl+K</p></div>
   </div>
 </div>
 
-<!-- ══════════ 3. STUDENT ══════════ -->
-<div class="slide" data-slide="2">
+<!-- ══════════ 4. STUDENT ACADEMIC ══════════ -->
+<div class="slide" data-slide="3">
   <div class="role role-s a">👩‍🎓 Student Role</div>
   <h2 class="section-title a d1">Academic Features</h2>
   <p class="section-desc a d2">Everything a student needs — from enrollment to graduation.</p>
@@ -177,7 +197,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
     <div class="card"><div class="card-icon" style="background:rgba(59,130,246,0.1)">📊</div><h3>Custom Dashboard</h3><p>Drag-and-drop widget grid. Quick access, deadlines, events, streak counter.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(34,197,94,0.1)">📝</div><h3>Grades Viewer</h3><p>Per-semester grades, GWA card, trend chart. PDF export & shareable grade cards.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(245,166,35,0.1)">📅</div><h3>Class Schedule</h3><p>Weekly timetable grid. Color-coded blocks with room and time details.</p></div>
-    <div class="card"><div class="card-icon" style="background:rgba(139,92,246,0.1)">📋</div><h3>Enrollment Wizard</h3><p>Schedule-first approach. Set preferences → pick subjects → auto conflict detection → confirm.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(139,92,246,0.1)">📋</div><h3>Enrollment Wizard</h3><p>Schedule-first approach. Set preferences, pick subjects, auto conflict detection, confirm.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(236,72,153,0.1)">💳</div><h3>Payments</h3><p>Fee breakdown, upload proof, real-time status tracker. OCR auto-matching.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(6,182,212,0.1)">📚</div><h3>Curriculum Flowchart</h3><p>Visual degree progress. Completed/in-progress/locked subjects with prerequisites.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(249,115,22,0.1)">🧮</div><h3>GPA Calculator</h3><p>"What grade do I need?" calculator. Philippine grading scale (1.0–5.0).</p></div>
@@ -189,8 +209,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   </div>
 </div>
 
-<!-- ══════════ 4. STUDENT COMMUNITY ══════════ -->
-<div class="slide" data-slide="3">
+<!-- ══════════ 5. STUDENT COMMUNITY ══════════ -->
+<div class="slide" data-slide="4">
   <div class="role role-s a">👩‍🎓 Student Role — Community</div>
   <h2 class="section-title a d1">Social & Collaboration</h2>
   <p class="section-desc a d2">Connect with classmates, faculty, and the campus community.</p>
@@ -207,8 +227,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   </div>
 </div>
 
-<!-- ══════════ 5. FACULTY ══════════ -->
-<div class="slide" data-slide="4">
+<!-- ══════════ 6. FACULTY ══════════ -->
+<div class="slide" data-slide="5">
   <div class="role role-f a">👨‍🏫 Faculty Role</div>
   <h2 class="section-title a d1">Teaching & Management</h2>
   <p class="section-desc a d2">Grade submission, attendance tracking, student management, and consultation tools.</p>
@@ -225,8 +245,8 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   </div>
 </div>
 
-<!-- ══════════ 6. ADMIN ══════════ -->
-<div class="slide" data-slide="5">
+<!-- ══════════ 7. ADMIN ══════════ -->
+<div class="slide" data-slide="6">
   <div class="role role-a a">🛡️ Admin / Superadmin</div>
   <h2 class="section-title a d1">University Management</h2>
   <p class="section-desc a d2">Academic setup, user management, financial oversight, analytics, and system monitoring.</p>
@@ -240,14 +260,14 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
     <div class="card"><div class="card-icon" style="background:rgba(249,115,22,0.1)">📢</div><h3>Announcements</h3><p>Targeted by program and year. Priority: low / normal / high / urgent.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(99,102,241,0.1)">📈</div><h3>Analytics</h3><p>Students per program, GWA distribution, payment breakdown, enrollment trends.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(34,197,94,0.1)">🎓</div><h3>Scholarships</h3><p>Create with GWA requirements. Review applications. Approve/reject/waitlist.</p></div>
-    <div class="card"><div class="card-icon" style="background:rgba(59,130,246,0.1)">📄</div><h3>Documents</h3><p>Process requests: pending → processing → ready → claimed.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(59,130,246,0.1)">📄</div><h3>Document Requests</h3><p>Process requests: pending → processing → ready → claimed.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(245,166,35,0.1)">✅</div><h3>Clearance</h3><p>Manage per department. Mark cleared or hold with remarks.</p></div>
     <div class="card"><div class="card-icon" style="background:rgba(139,92,246,0.1)">🛡️</div><h3>Audit Log</h3><p>Track system actions. Filter by type and date. Who did what, when.</p></div>
   </div>
 </div>
 
-<!-- ══════════ 7. TECH STACK ══════════ -->
-<div class="slide" data-slide="6">
+<!-- ══════════ 8. TECH STACK ══════════ -->
+<div class="slide" data-slide="7">
   <div class="section-chip a">Architecture</div>
   <h2 class="section-title a d1">Tech Stack</h2>
   <p class="section-desc a d2">Modern, production-ready architecture with real-time capabilities and row-level security.</p>
@@ -256,9 +276,9 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
     <div class="t-card"><span class="ico">⚡</span><h3>Vite</h3><p>Fast build & HMR</p></div>
     <div class="t-card"><span class="ico">🟦</span><h3>TypeScript</h3><p>Strict type safety</p></div>
     <div class="t-card"><span class="ico">🎨</span><h3>Tailwind CSS</h3><p>Utility-first + themes</p></div>
-    <div class="t-card"><span class="ico">🔥</span><h3>Supabase</h3><p>Auth, DB, Realtime</p></div>
+    <div class="t-card"><span class="ico">🔥</span><h3>Supabase</h3><p>Auth, DB, Realtime, Storage</p></div>
     <div class="t-card"><span class="ico">🐻</span><h3>Zustand</h3><p>State management</p></div>
-    <div class="t-card"><span class="ico">🛤️</span><h3>React Router</h3><p>Client routing</p></div>
+    <div class="t-card"><span class="ico">🛤️</span><h3>React Router</h3><p>Client routing & guards</p></div>
     <div class="t-card"><span class="ico">📄</span><h3>jsPDF</h3><p>PDF export</p></div>
   </div>
   <div class="two-col a d4">
@@ -269,30 +289,63 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
     </div>
     <div>
       <div class="col-head">Database</div>
-      <div class="card" style="margin-bottom:8px"><h3>25+ Postgres Tables</h3><p>Normalized schema. Foreign keys, indexes, constraints, JSONB fields.</p></div>
-      <div class="card"><h3>Realtime Channels</h3><p>Supabase postgres_changes for live messaging. Auto-refresh on mutations.</p></div>
+      <div class="card" style="margin-bottom:8px"><h3>25+ Postgres Tables</h3><p>Normalized schema. Foreign keys, indexes, constraints, enums, JSONB fields.</p></div>
+      <div class="card"><h3>Realtime Channels</h3><p>Supabase postgres_changes for live messaging and auto-refresh on mutations.</p></div>
     </div>
   </div>
 </div>
 
-<!-- ══════════ 8. END ══════════ -->
-<div class="slide" data-slide="7">
-  <div class="logo a"><div class="logo-mark">🎓</div><div class="logo-name">Angeles State University</div></div>
+<!-- ══════════ 9. DESIGN SYSTEM ══════════ -->
+<div class="slide" data-slide="8">
+  <div class="section-chip a">Design</div>
+  <h2 class="section-title a d1">Design System</h2>
+  <p class="section-desc a d2">Consistent, accessible, and responsive across all devices.</p>
+  <div class="grid grid-3 a d3" style="max-width:900px">
+    <div class="card"><div class="card-icon" style="background:rgba(245,166,35,0.1)">🎨</div><h3>Navy & Gold Theme</h3><p>Primary: #0077B6 (deep navy). Accent: #C8A415 (gold). Refined academic aesthetic.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(59,130,246,0.1)">🌙</div><h3>Dark & Light Mode</h3><p>Full theme support via CSS variables. Persistent user preference in localStorage.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(34,197,94,0.1)">📱</div><h3>Responsive Design</h3><p>Desktop sidebar, tablet adaptive, mobile bottom nav. Touch-friendly (44px targets).</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(139,92,246,0.1)">🔤</div><h3>Inter + Space Grotesk</h3><p>Inter for body text. Space Grotesk for display headings. Clean, modern, legible.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(236,72,153,0.1)">🧩</div><h3>Component Library</h3><p>Button, Card, Badge, Input, Modal. Consistent variants, sizes, and states.</p></div>
+    <div class="card"><div class="card-icon" style="background:rgba(6,182,212,0.1)">♿</div><h3>Accessibility</h3><p>Semantic HTML, ARIA labels, focus indicators, reduced motion support, scope headers.</p></div>
+  </div>
+  <div class="grid grid-4 a d4" style="max-width:900px;margin-top:16px">
+    <div class="card" style="text-align:center;padding:12px">
+      <div style="width:48px;height:48px;border-radius:12px;background:#0077B6;margin:0 auto 8px;border:1px solid rgba(255,255,255,0.1)"></div>
+      <div style="font-size:11px;font-weight:600">Navy #0077B6</div>
+    </div>
+    <div class="card" style="text-align:center;padding:12px">
+      <div style="width:48px;height:48px;border-radius:12px;background:#C8A415;margin:0 auto 8px"></div>
+      <div style="font-size:11px;font-weight:600">Gold #C8A415</div>
+    </div>
+    <div class="card" style="text-align:center;padding:12px">
+      <div style="width:48px;height:48px;border-radius:12px;background:#22C55E;margin:0 auto 8px"></div>
+      <div style="font-size:11px;font-weight:600">Success #22C55E</div>
+    </div>
+    <div class="card" style="text-align:center;padding:12px">
+      <div style="width:48px;height:48px;border-radius:12px;background:#EF4444;margin:0 auto 8px"></div>
+      <div style="font-size:11px;font-weight:600">Error #EF4444</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 10. END ══════════ -->
+<div class="slide" data-slide="9">
+  <div class="logo a"><div class="logo-mark">🎓</div><div class="logo-name">Angeles University Foundation</div></div>
   <h1 class="hero-title a d1">Thank You</h1>
-  <p class="sub-text a d2">Angeles State University — Student Portal System</p>
+  <p class="sub-text a d2">Angeles University Foundation — Student Portal System</p>
   <div class="stats a d3">
-    <div><div class="stat-n">40+</div><div class="stat-l">Features</div></div>
-    <div><div class="stat-n">20+</div><div class="stat-l">Pages</div></div>
+    <div><div class="stat-n">60+</div><div class="stat-l">Features</div></div>
+    <div><div class="stat-n">30+</div><div class="stat-l">Pages</div></div>
     <div><div class="stat-n">25+</div><div class="stat-l">Tables</div></div>
     <div><div class="stat-n">100+</div><div class="stat-l">Components</div></div>
   </div>
   <div class="a d4" style="margin-top:36px;text-align:center">
     <p style="color:var(--text-dim);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px">Test Accounts</p>
     <div class="acct-grid">
-      <div class="acct"><h3>Student</h3><p>maria.santos<br>@uniportal.test</p></div>
-      <div class="acct"><h3>Faculty</h3><p>prof.santos<br>@uniportal.test</p></div>
-      <div class="acct"><h3>Admin</h3><p>rosa.mendoza<br>@uniportal.test</p></div>
-      <div class="acct"><h3>Superadmin</h3><p>superadmin<br>@uniportal.test</p></div>
+      <div class="acct"><h3>👩‍🎓 Student</h3><p>maria.santos<br>@uniportal.test</p></div>
+      <div class="acct"><h3>👨‍🏫 Faculty</h3><p>prof.santos<br>@uniportal.test</p></div>
+      <div class="acct"><h3>🛡️ Admin</h3><p>rosa.mendoza<br>@uniportal.test</p></div>
+      <div class="acct"><h3>⚡ Superadmin</h3><p>superadmin<br>@uniportal.test</p></div>
     </div>
     <p style="color:var(--text-muted);font-size:11px;margin-top:12px">Password for all: <code style="color:var(--gold)">Test1234!</code></p>
   </div>
@@ -308,7 +361,7 @@ body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml
   </button>
   <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
     <div class="dots" id="dots"></div>
-    <div class="counter" id="counter">1 / 8</div>
+    <div class="counter" id="counter">1 / 10</div>
   </div>
   <button class="nav-btn" id="nextBtn" onclick="next()">
     Next

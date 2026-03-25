@@ -45,16 +45,16 @@ export function ShareGradeCard({ gwa, semester, academicYear, program, studentNa
             {/* Grade Card Preview */}
             <div
               ref={cardRef}
-              className="mb-4 overflow-hidden rounded-[var(--radius-lg)] bg-gradient-to-br from-[#0D1B3E] to-[#1A2D5A] p-6 text-white shadow-lg"
+              className="mb-4 overflow-hidden rounded-[var(--radius-lg)] bg-gradient-to-br from-[#0077B6] to-[#005A8C] p-6 text-white shadow-lg"
             >
               <div className="mb-4 flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-wider text-white/60">ASU Portal</span>
-                <QrCode className="h-8 w-8 text-[#F5A623]" />
+                <QrCode className="h-8 w-8 text-[#C8A415]" />
               </div>
               <p className="text-sm text-white/70">{studentName}</p>
               <p className="text-xs text-white/50">{program}</p>
               <div className="my-4 text-center">
-                <p className="text-4xl font-bold text-[#F5A623]">{gwa.toFixed(2)}</p>
+                <p className="text-4xl font-bold text-[#C8A415]">{gwa.toFixed(2)}</p>
                 <p className="mt-1 text-sm font-semibold text-white/80">{status}</p>
               </div>
               <div className="flex items-center justify-between text-xs text-white/50">

@@ -1,6 +1,7 @@
 import { type FormEvent, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Mail } from 'lucide-react'
+import aufLogoFull from '@/images/logo-2.png'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -123,6 +124,11 @@ export default function LoginPage() {
   return (
     <>
     <EnrollmentBanner />
+    <div className="flex flex-col items-center gap-3 mb-6">
+      <img src={aufLogoFull} alt="AUF Logo" className="h-20 w-20 object-contain" />
+      <h1 className="text-xl font-bold text-[var(--color-text-primary)] font-display">Angeles University Foundation</h1>
+      <p className="text-sm text-[var(--color-text-secondary)]">Student Portal</p>
+    </div>
     <Card className="p-6">
       {/* Mode toggle tabs */}
       <div className="mb-4 flex rounded-[var(--radius-md)] border border-[var(--color-border)] p-1">

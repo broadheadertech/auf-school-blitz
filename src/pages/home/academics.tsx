@@ -50,7 +50,7 @@ const DEFAULT_BADGE = { bg: 'rgba(59,130,246,0.15)', text: '#3B82F6' }
 const typeBadge: Record<string, { bg: string; text: string }> = {
   core: DEFAULT_BADGE,
   ge: { bg: 'rgba(34,197,94,0.15)', text: '#22C55E' },
-  elective: { bg: 'rgba(245,166,35,0.15)', text: '#F5A623' },
+  elective: { bg: 'rgba(245,166,35,0.15)', text: '#C8A415' },
 }
 
 export default function AcademicsPage() {
@@ -110,15 +110,15 @@ export default function AcademicsPage() {
       {/* === NAVBAR === */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: '#0D1B3E', color: '#fff',
+        background: '#0077B6', color: '#fff',
         padding: '0 32px', height: 64,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
       }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: '#fff' }}>
-          <GraduationCap size={28} color="#F5A623" />
+          <GraduationCap size={28} color="#C8A415" />
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 18 }}>
-            Angeles State University
+            Angeles University Foundation
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
@@ -130,16 +130,16 @@ export default function AcademicsPage() {
             { label: 'News', href: '/public/news' },
           ].map(item => (
             <Link key={item.label} to={item.href} style={{
-              color: item.label === 'Academics' ? '#F5A623' : '#CBD5E1',
+              color: item.label === 'Academics' ? '#C8A415' : '#CBD5E1',
               textDecoration: 'none', fontSize: 14, fontWeight: item.label === 'Academics' ? 700 : 500,
               transition: 'color 0.2s',
             }}
-              onMouseOver={e => (e.currentTarget.style.color = '#F5A623')}
+              onMouseOver={e => (e.currentTarget.style.color = '#C8A415')}
               onMouseOut={e => { if (item.label !== 'Academics') e.currentTarget.style.color = '#CBD5E1' }}
             >{item.label}</Link>
           ))}
           <Link to="/login" style={{
-            background: 'linear-gradient(135deg, #F5A623, #FFD280)', color: '#0D1B3E',
+            background: 'linear-gradient(135deg, #C8A415, #FFD280)', color: '#0077B6',
             padding: '8px 20px', borderRadius: 8, fontSize: 13, fontWeight: 700,
             textDecoration: 'none', transition: 'transform 0.2s',
           }}>Student Portal</Link>
@@ -149,19 +149,19 @@ export default function AcademicsPage() {
       {/* === HERO === */}
       <section style={{
         position: 'relative', height: 340, overflow: 'hidden',
-        background: 'linear-gradient(135deg, #0D1B3E 0%, #1a2d5a 60%, #0D1B3E 100%)',
+        background: 'linear-gradient(135deg, #0077B6 0%, #1a2d5a 60%, #0077B6 100%)',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         textAlign: 'center', padding: '0 24px',
       }}>
         <div style={{
           position: 'absolute', inset: 0, opacity: 0.06,
-          backgroundImage: 'radial-gradient(circle at 20% 80%, #F5A623 1px, transparent 1px), radial-gradient(circle at 80% 20%, #F5A623 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle at 20% 80%, #C8A415 1px, transparent 1px), radial-gradient(circle at 80% 20%, #C8A415 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }} />
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px',
           borderRadius: 100, border: '1px solid rgba(245,166,35,0.3)', background: 'rgba(245,166,35,0.1)',
-          marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#F5A623', letterSpacing: 1,
+          marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#C8A415', letterSpacing: 1,
         }}>
           <BookOpen size={14} /> ACADEMICS
         </div>
@@ -179,7 +179,7 @@ export default function AcademicsPage() {
         <div style={{ textAlign: 'center', padding: '80px 24px' }}>
           <div style={{
             width: 40, height: 40, border: '3px solid var(--color-border)',
-            borderTopColor: '#F5A623', borderRadius: '50%',
+            borderTopColor: '#C8A415', borderRadius: '50%',
             animation: 'spin 0.8s linear infinite', margin: '0 auto 16px',
           }} />
           <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
@@ -399,7 +399,7 @@ export default function AcademicsPage() {
               {/* Header */}
               <div style={{
                 display: 'grid', gridTemplateColumns: '120px 1fr 80px 100px',
-                padding: '12px 24px', background: '#0D1B3E', color: '#94A3B8',
+                padding: '12px 24px', background: '#0077B6', color: '#94A3B8',
                 fontSize: 11, fontWeight: 700, letterSpacing: 0.5, textTransform: 'uppercase',
               }}>
                 <span>Code</span>
@@ -449,15 +449,15 @@ export default function AcademicsPage() {
 
       {/* === FOOTER === */}
       <footer style={{
-        background: '#0D1B3E', color: '#94A3B8', padding: '48px 48px 24px',
+        background: '#0077B6', color: '#94A3B8', padding: '48px 48px 24px',
         borderTop: '1px solid rgba(255,255,255,0.06)',
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <GraduationCap size={24} color="#F5A623" />
+              <GraduationCap size={24} color="#C8A415" />
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 16, color: '#fff' }}>
-                Angeles State University
+                Angeles University Foundation
               </span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 300 }}>
@@ -499,7 +499,7 @@ export default function AcademicsPage() {
           borderTop: '1px solid rgba(255,255,255,0.06)',
           display: 'flex', justifyContent: 'space-between', fontSize: 12,
         }}>
-          <span>&copy; 2026 Angeles State University. All rights reserved.</span>
+          <span>&copy; 2026 Angeles University Foundation. All rights reserved.</span>
           <span>Privacy Policy &middot; Terms of Service</span>
         </div>
       </footer>

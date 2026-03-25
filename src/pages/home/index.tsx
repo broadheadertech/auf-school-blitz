@@ -1,16 +1,17 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  GraduationCap, BookOpen, Calendar, Newspaper, Users, ChevronLeft, ChevronRight,
+  BookOpen, Calendar, Newspaper, Users, ChevronLeft, ChevronRight,
   ArrowRight, MapPin, Phone, Mail, Globe, Award, Shield, Heart,
-  Beaker, Palette, Stethoscope, Monitor, Briefcase, Building2
+  Beaker, Palette, Stethoscope, Monitor, Briefcase, Building2, GraduationCap
 } from 'lucide-react'
+import aufLogo from '@/images/logo.png'
 
 const SLIDES = [
   {
     image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&h=600&fit=crop',
     title: 'Shaping Tomorrow\'s Leaders',
-    subtitle: 'Angeles State University provides world-class education rooted in Filipino values and academic excellence.',
+    subtitle: 'Angeles University Foundation provides world-class education rooted in Filipino values and academic excellence.',
     cta: 'Apply Now',
   },
   {
@@ -28,7 +29,7 @@ const SLIDES = [
 ]
 
 const NEWS = [
-  { id: 1, category: 'Academic', title: 'University Rankings 2026: ASU Climbs to Top 15 Nationally', date: 'March 20, 2026', excerpt: 'Angeles State University continues its upward trajectory in the latest national university rankings, reflecting improvements in research output and graduate employability.', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&h=250&fit=crop' },
+  { id: 1, category: 'Academic', title: 'University Rankings 2026: AUF Climbs to Top 15 Nationally', date: 'March 20, 2026', excerpt: 'Angeles University Foundation continues its upward trajectory in the latest national university rankings, reflecting improvements in research output and graduate employability.', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&h=250&fit=crop' },
   { id: 2, category: 'Campus Life', title: 'New Student Center Grand Opening Set for April', date: 'March 18, 2026', excerpt: 'The state-of-the-art student center featuring co-working spaces, a cafeteria, and recreation facilities will open its doors next month.', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=250&fit=crop' },
   { id: 3, category: 'Sports', title: 'ASU Eagles Win Regional Basketball Championship', date: 'March 15, 2026', excerpt: 'The men\'s basketball team clinched the Central Luzon Athletic Association title with a thrilling overtime victory.', image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=250&fit=crop' },
   { id: 4, category: 'Research', title: 'Faculty Awarded ₱5M Grant for Renewable Energy Study', date: 'March 12, 2026', excerpt: 'Dr. Elena Reyes and her team received a major DOST grant for their research on solar energy optimization in tropical climates.', image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=250&fit=crop' },
@@ -89,16 +90,13 @@ export default function HomePage() {
       {/* === NAVBAR === */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: '#0D1B3E', color: '#fff',
+        background: '#0077B6', color: '#fff',
         padding: '0 32px', height: 64,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <GraduationCap size={28} color="#F5A623" />
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 18 }}>
-            Angeles State University
-          </span>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img src={aufLogo} alt="AUF Logo" style={{ height: 56, objectFit: 'contain' }} />
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
           {[
@@ -109,12 +107,12 @@ export default function HomePage() {
             { label: 'News', path: '/public/news' },
           ].map(item => (
             <Link key={item.label} to={item.path} style={{ color: '#CBD5E1', textDecoration: 'none', fontSize: 14, fontWeight: 500, transition: 'color 0.2s' }}
-              onMouseOver={e => (e.currentTarget.style.color = '#F5A623')}
+              onMouseOver={e => (e.currentTarget.style.color = '#C8A415')}
               onMouseOut={e => (e.currentTarget.style.color = '#CBD5E1')}
             >{item.label}</Link>
           ))}
           <Link to="/login" style={{
-            background: 'linear-gradient(135deg, #F5A623, #FFD280)', color: '#0D1B3E',
+            background: 'linear-gradient(135deg, #C8A415, #FFD280)', color: '#0077B6',
             padding: '8px 20px', borderRadius: 8, fontSize: 13, fontWeight: 700,
             textDecoration: 'none', transition: 'transform 0.2s',
           }}>Student Portal</Link>
@@ -146,7 +144,7 @@ export default function HomePage() {
               </p>
               <Link to="/login" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8, width: 'fit-content',
-                background: 'linear-gradient(135deg, #F5A623, #FFD280)', color: '#0D1B3E',
+                background: 'linear-gradient(135deg, #C8A415, #FFD280)', color: '#0077B6',
                 padding: '12px 28px', borderRadius: 10, fontSize: 15, fontWeight: 700,
                 textDecoration: 'none', boxShadow: '0 4px 20px rgba(245,166,35,0.3)',
               }}>{slide.cta} <ArrowRight size={16} /></Link>
@@ -171,7 +169,7 @@ export default function HomePage() {
           {SLIDES.map((_, i) => (
             <button key={i} onClick={() => setCurrentSlide(i)} aria-label={`Slide ${i+1}`} style={{
               width: i === currentSlide ? 28 : 8, height: 8, borderRadius: 4,
-              background: i === currentSlide ? '#F5A623' : 'rgba(255,255,255,0.4)',
+              background: i === currentSlide ? '#C8A415' : 'rgba(255,255,255,0.4)',
               border: 'none', cursor: 'pointer', transition: 'all 0.3s',
             }} />
           ))}
@@ -192,7 +190,7 @@ export default function HomePage() {
               onMouseOut={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)' }}
             >
               <div style={{ width: 44, height: 44, borderRadius: 10, background: 'rgba(245,166,35,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <link.icon size={20} color="#F5A623" />
+                <link.icon size={20} color="#C8A415" />
               </div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14 }}>{link.label}</div>
@@ -207,12 +205,12 @@ export default function HomePage() {
       <section style={{ padding: '48px 48px', maxWidth: 1200, margin: '0 auto' }}>
         <div style={{
           display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24,
-          background: 'linear-gradient(135deg, #0D1B3E, #1a2d5a)', borderRadius: 16,
+          background: 'linear-gradient(135deg, #0077B6, #1a2d5a)', borderRadius: 16,
           padding: '32px 40px',
         }}>
           {STATS.map(stat => (
             <div key={stat.label} style={{ textAlign: 'center' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 800, color: '#F5A623' }}>{stat.value}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 800, color: '#C8A415' }}>{stat.value}</div>
               <div style={{ fontSize: 13, color: '#94A3B8', marginTop: 4, fontWeight: 500 }}>{stat.label}</div>
             </div>
           ))}
@@ -226,7 +224,7 @@ export default function HomePage() {
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 700 }}>Latest News</h2>
             <p style={{ color: 'var(--color-text-secondary)', fontSize: 14, marginTop: 4 }}>Stay updated with campus happenings</p>
           </div>
-          <Link to="/login" style={{ color: '#F5A623', fontSize: 14, fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <Link to="/login" style={{ color: '#C8A415', fontSize: 14, fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
             View all <ArrowRight size={14} />
           </Link>
         </div>
@@ -310,7 +308,7 @@ export default function HomePage() {
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 700 }}>Upcoming Events</h2>
             <p style={{ color: 'var(--color-text-secondary)', fontSize: 14, marginTop: 4 }}>Don't miss what's happening on campus</p>
           </div>
-          <Link to="/login" style={{ color: '#F5A623', fontSize: 14, fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <Link to="/login" style={{ color: '#C8A415', fontSize: 14, fontWeight: 600, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
             View calendar <ArrowRight size={14} />
           </Link>
         </div>
@@ -321,7 +319,7 @@ export default function HomePage() {
               background: 'var(--color-surface)', border: '1px solid var(--color-border)',
               borderRadius: 12, transition: 'all 0.2s',
             }}
-              onMouseOver={e => { e.currentTarget.style.borderColor = '#F5A623' }}
+              onMouseOver={e => { e.currentTarget.style.borderColor = '#C8A415' }}
               onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--color-border)' }}
             >
               <div style={{
@@ -329,8 +327,8 @@ export default function HomePage() {
                 display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                 flexShrink: 0,
               }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: '#F5A623', lineHeight: 1 }}>{evt.date.split(' ')[0]}</div>
-                <div style={{ fontSize: 20, fontWeight: 800, color: '#F5A623', lineHeight: 1 }}>{evt.date.split(' ')[1]}</div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: '#C8A415', lineHeight: 1 }}>{evt.date.split(' ')[0]}</div>
+                <div style={{ fontSize: 20, fontWeight: 800, color: '#C8A415', lineHeight: 1 }}>{evt.date.split(' ')[1]}</div>
               </div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 15, fontWeight: 600 }}>{evt.title}</div>
@@ -345,24 +343,24 @@ export default function HomePage() {
       </section>
 
       {/* === ANNOUNCEMENTS BANNER === */}
-      <section style={{ padding: '48px 48px', background: 'linear-gradient(135deg, #0D1B3E, #1a2d5a)' }}>
+      <section style={{ padding: '48px 48px', background: 'linear-gradient(135deg, #0077B6, #1a2d5a)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', textAlign: 'center' }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px',
             borderRadius: 100, border: '1px solid rgba(245,166,35,0.3)', background: 'rgba(245,166,35,0.1)',
-            marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#F5A623', letterSpacing: 1,
+            marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#C8A415', letterSpacing: 1,
           }}>
             <Award size={14} /> ANNOUNCEMENT
           </div>
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 800, color: '#fff', marginBottom: 12 }}>
-            Enrollment for 1st Sem AY 2026–2027 is <span style={{ color: '#F5A623' }}>NOW OPEN</span>
+            Enrollment for 1st Sem AY 2026–2027 is <span style={{ color: '#C8A415' }}>NOW OPEN</span>
           </h2>
           <p style={{ color: '#94A3B8', fontSize: 16, maxWidth: 600, margin: '0 auto 28px', lineHeight: 1.6 }}>
             New and returning students can now enroll through the student portal. Enrollment period: April 1 – April 30, 2026.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center' }}>
             <Link to="/login" style={{
-              background: 'linear-gradient(135deg, #F5A623, #FFD280)', color: '#0D1B3E',
+              background: 'linear-gradient(135deg, #C8A415, #FFD280)', color: '#0077B6',
               padding: '12px 32px', borderRadius: 10, fontSize: 15, fontWeight: 700,
               textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8,
             }}>Enroll Now <ArrowRight size={16} /></Link>
@@ -397,7 +395,7 @@ export default function HomePage() {
                 width: 48, height: 48, borderRadius: 12, background: 'rgba(245,166,35,0.1)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 14px',
               }}>
-                <item.icon size={22} color="#F5A623" />
+                <item.icon size={22} color="#C8A415" />
               </div>
               <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 6 }}>{item.title}</div>
               <div style={{ fontSize: 13, color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>{item.desc}</div>
@@ -408,15 +406,15 @@ export default function HomePage() {
 
       {/* === FOOTER === */}
       <footer style={{
-        background: '#0D1B3E', color: '#94A3B8', padding: '48px 48px 24px',
+        background: '#0077B6', color: '#94A3B8', padding: '48px 48px 24px',
         borderTop: '1px solid rgba(255,255,255,0.06)',
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <GraduationCap size={24} color="#F5A623" />
+              <GraduationCap size={24} color="#C8A415" />
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 16, color: '#fff' }}>
-                Angeles State University
+                Angeles University Foundation
               </span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 300 }}>
@@ -458,7 +456,7 @@ export default function HomePage() {
           borderTop: '1px solid rgba(255,255,255,0.06)',
           display: 'flex', justifyContent: 'space-between', fontSize: 12,
         }}>
-          <span>&copy; 2026 Angeles State University. All rights reserved.</span>
+          <span>&copy; 2026 Angeles University Foundation. All rights reserved.</span>
           <span>Privacy Policy &middot; Terms of Service</span>
         </div>
       </footer>

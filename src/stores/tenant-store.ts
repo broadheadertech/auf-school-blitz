@@ -16,8 +16,8 @@ const DEFAULT_TENANT: TenantConfig = {
   name: 'ASU Portal Demo University',
   slug: 'demo',
   logoUrl: null,
-  primaryColor: '#0D1B3E',
-  accentColor: '#F5A623',
+  primaryColor: '#0077B6',
+  accentColor: '#C8A415',
   faviconUrl: null,
   isActive: true,
 }

@@ -71,25 +71,25 @@ function WrappedCard({ data, onClose }: { data: WrappedData; onClose?: () => voi
   return (
     <div className="space-y-4">
       {/* Wrapped visual card */}
-      <div className="relative overflow-hidden rounded-[var(--radius-lg)] bg-gradient-to-br from-[#0D1B3E] via-[#1A2D5A] to-[#0D1B3E] p-6 text-white shadow-lg">
+      <div className="relative overflow-hidden rounded-[var(--radius-lg)] bg-gradient-to-br from-[#0077B6] via-[#005A8C] to-[#0077B6] p-6 text-white shadow-lg">
         {onClose && (
           <button type="button" onClick={onClose} className="absolute top-3 right-3 rounded-full p-1 hover:bg-white/10" aria-label="Close">
             <X className="h-4 w-4" />
           </button>
         )}
         <div className="flex items-center gap-2 mb-4">
-          <Sparkles className="h-5 w-5 text-[#F5A623]" />
-          <span className="text-xs font-bold uppercase tracking-widest text-[#F5A623]">Semester Wrapped</span>
+          <Sparkles className="h-5 w-5 text-[#C8A415]" />
+          <span className="text-xs font-bold uppercase tracking-widest text-[#C8A415]">Semester Wrapped</span>
         </div>
         <p className="text-sm text-white/60">{data.semester} AY {data.academicYear}</p>
 
         <div className="my-6 grid grid-cols-2 gap-4">
           <div className="text-center">
-            <p className="text-3xl font-bold text-[#F5A623]">{data.subjectsCompleted}</p>
+            <p className="text-3xl font-bold text-[#C8A415]">{data.subjectsCompleted}</p>
             <p className="text-xs text-white/50">Subjects</p>
           </div>
           <div className="text-center">
-            <p className="text-3xl font-bold text-[#F5A623]">{data.gwa.toFixed(2)}</p>
+            <p className="text-3xl font-bold text-[#C8A415]">{data.gwa.toFixed(2)}</p>
             <p className="text-xs text-white/50">GWA</p>
           </div>
           <div className="text-center">
@@ -103,7 +103,7 @@ function WrappedCard({ data, onClose }: { data: WrappedData; onClose?: () => voi
         </div>
 
         <div className="text-center">
-          <p className="text-lg font-bold text-[#F5A623]">{data.academicStatus}</p>
+          <p className="text-lg font-bold text-[#C8A415]">{data.academicStatus}</p>
           <p className="text-xs text-white/40">{data.totalUnits} units completed</p>
         </div>
 
@@ -145,11 +145,11 @@ export function SemesterWrapped() {
         <button
           type="button"
           onClick={() => setViewing(latest)}
-          className="w-full rounded-[var(--radius-lg)] bg-gradient-to-r from-[#0D1B3E] to-[#1A2D5A] p-4 text-left text-white shadow-md transition-transform hover:scale-[1.01]"
+          className="w-full rounded-[var(--radius-lg)] bg-gradient-to-r from-[#0077B6] to-[#005A8C] p-4 text-left text-white shadow-md transition-transform hover:scale-[1.01]"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Sparkles className="h-5 w-5 text-[#F5A623]" />
+              <Sparkles className="h-5 w-5 text-[#C8A415]" />
               <div>
                 <p className="text-sm font-bold">Your Semester Wrapped is ready!</p>
                 <p className="text-xs text-white/60">{latest.semester} AY {latest.academicYear}</p>

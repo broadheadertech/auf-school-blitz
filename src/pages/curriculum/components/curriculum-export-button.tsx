@@ -18,8 +18,8 @@ function hexToRgb(hex: string): [number, number, number] {
   return [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)]
 }
 
-const NAVY = '#0D1B3E'
-const GOLD = '#F5A623'
+const NAVY = '#0077B6'
+const GOLD = '#C8A415'
 const WHITE = '#FFFFFF'
 const LIGHT_GREY = '#F8F9FC'
 
@@ -141,7 +141,7 @@ function generateCurriculumPdf(
   doc.setFontSize(7)
   doc.setTextColor(128, 128, 128)
   doc.text(
-    'Generated from ASU Portal. This is an unofficial document — contact the Registrar for official records.',
+    'Generated from AUF Portal. This is an unofficial document — contact the Registrar for official records.',
     pageWidth / 2, 285,
     { align: 'center' },
   )

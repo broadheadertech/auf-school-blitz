@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom'
+import aufLogo from '@/images/logo.png'
 import {
   LayoutDashboard,
   BookOpen,
@@ -97,9 +98,9 @@ export function Sidebar() {
       aria-label="Main navigation"
       className="hidden xl:flex flex-col w-60 min-h-screen bg-[var(--color-primary)] text-white"
     >
-      <div className="flex items-center gap-2 px-4 py-5 border-b border-white/10">
-        <GraduationCap className="h-8 w-8 text-[var(--color-accent)]" />
-        <span className="font-display text-lg font-bold">ASU Portal</span>
+      <div className="flex items-center gap-3 px-4 py-5 border-b border-white/10">
+        <img src={aufLogo} alt="AUF Logo" className="h-10 w-10 object-contain" />
+        <span className="font-display text-lg font-bold">AUF Portal</span>
       </div>
 
       <div className="flex-1 flex flex-col gap-1 px-2 py-3">

@@ -106,18 +106,18 @@ export function GwaTrendChart({ semesters }: GwaTrendChartProps) {
             <Line
               type="monotone"
               dataKey="gwa"
-              stroke="#0D1B3E"
+              stroke="#0077B6"
               strokeWidth={2.5}
               dot={{
                 r: 5,
-                fill: '#0D1B3E',
+                fill: '#0077B6',
                 stroke: '#FFFFFF',
                 strokeWidth: 2,
               }}
               activeDot={{
                 r: 7,
-                fill: '#F5A623',
-                stroke: '#0D1B3E',
+                fill: '#C8A415',
+                stroke: '#0077B6',
                 strokeWidth: 2,
               }}
             />

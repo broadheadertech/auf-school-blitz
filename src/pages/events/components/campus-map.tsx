@@ -26,7 +26,7 @@ export function CampusMap({ venue }: CampusMapProps) {
   const [expanded, setExpanded] = useState(false)
   const pos = VENUE_POSITIONS[venue]
 
-  if (!pos || venue === 'Online via ASU Portal') return null
+  if (!pos || venue === 'Online via AUF Portal') return null
 
   const MiniMap = () => (
     <button

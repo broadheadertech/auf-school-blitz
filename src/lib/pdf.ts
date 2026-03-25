@@ -4,8 +4,8 @@ import type { GradeEntry, SemesterGrades } from '@/utils/calculate-gwa'
 import { getGwaStatus } from '@/utils/calculate-gwa'
 
 // Branding colors
-const NAVY = '#0D1B3E'
-const GOLD = '#F5A623'
+const NAVY = '#0077B6'
+const GOLD = '#C8A415'
 const WHITE = '#FFFFFF'
 const LIGHT_GREY = '#F8F9FC'
 const TEXT_SECONDARY = '#64748B'
@@ -68,7 +68,7 @@ export function generateGradeReportPdf({
   doc.setFillColor(goldRgb[0], goldRgb[1], goldRgb[2])
   doc.rect(0, 35, pageWidth, 2, 'F')
 
-  // ASU Portal text
+  // AUF Portal text
   const whiteRgb = hexToRgb(WHITE)
   doc.setTextColor(whiteRgb[0], whiteRgb[1], whiteRgb[2])
   doc.setFontSize(22)
@@ -233,7 +233,7 @@ export function generateGradeReportPdf({
   doc.setFontSize(8)
   doc.setTextColor(secRgb[0], secRgb[1], secRgb[2])
   doc.text(
-    'This is an unofficial grade report generated from ASU Portal. For official records, contact the Registrar.',
+    'This is an unofficial grade report generated from AUF Portal. For official records, contact the Registrar.',
     pageWidth / 2,
     285,
     { align: 'center' },

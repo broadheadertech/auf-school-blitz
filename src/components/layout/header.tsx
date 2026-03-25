@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { Bell, GraduationCap, Sun, Moon } from 'lucide-react'
+import { Bell, Sun, Moon } from 'lucide-react'
+import aufLogo from '@/images/logo.png'
 import { useNotificationStore } from '@/stores/notification-store'
 import { useThemeStore } from '@/stores/theme-store'
 import { NotificationInbox } from '@/components/notification-inbox'
@@ -45,9 +46,9 @@ export function Header() {
   return (
     <header className="flex items-center justify-between border-b border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3">
       <div className="flex items-center gap-2 xl:hidden">
-        <GraduationCap className="h-7 w-7 text-[var(--color-accent)]" />
+        <img src={aufLogo} alt="AUF Logo" className="h-10 w-10 object-contain" />
         <span className="font-display text-base font-bold text-[var(--color-primary)]">
-          ASU Portal
+          AUF Portal
         </span>
       </div>
 

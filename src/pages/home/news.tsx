@@ -100,15 +100,15 @@ export default function NewsPage() {
       {/* ═══ NAVBAR ═══ */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: '#0D1B3E', color: '#fff',
+        background: '#0077B6', color: '#fff',
         padding: '0 32px', height: 64,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
       }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: '#fff' }}>
-          <GraduationCap size={28} color="#F5A623" />
+          <GraduationCap size={28} color="#C8A415" />
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 18 }}>
-            Angeles State University
+            Angeles University Foundation
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
@@ -120,16 +120,16 @@ export default function NewsPage() {
             { label: 'News', to: '/public/news' },
           ].map(item => (
             <Link key={item.label} to={item.to} style={{
-              color: item.label === 'News' ? '#F5A623' : '#CBD5E1',
+              color: item.label === 'News' ? '#C8A415' : '#CBD5E1',
               textDecoration: 'none', fontSize: 14, fontWeight: item.label === 'News' ? 700 : 500,
               transition: 'color 0.2s',
             }}
-              onMouseOver={e => (e.currentTarget.style.color = '#F5A623')}
+              onMouseOver={e => (e.currentTarget.style.color = '#C8A415')}
               onMouseOut={e => { if (item.label !== 'News') e.currentTarget.style.color = '#CBD5E1' }}
             >{item.label}</Link>
           ))}
           <Link to="/login" style={{
-            background: 'linear-gradient(135deg, #F5A623, #FFD280)', color: '#0D1B3E',
+            background: 'linear-gradient(135deg, #C8A415, #FFD280)', color: '#0077B6',
             padding: '8px 20px', borderRadius: 8, fontSize: 13, fontWeight: 700,
             textDecoration: 'none',
           }}>Student Portal</Link>
@@ -139,7 +139,7 @@ export default function NewsPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section style={{
         position: 'relative', height: 260, overflow: 'hidden',
-        background: 'linear-gradient(135deg, #0D1B3E 0%, #1a2d5a 100%)',
+        background: 'linear-gradient(135deg, #0077B6 0%, #1a2d5a 100%)',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       }}>
         {/* decorative circles */}
@@ -148,7 +148,7 @@ export default function NewsPage() {
         <div style={{
           display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px',
           borderRadius: 100, border: '1px solid rgba(245,166,35,0.3)', background: 'rgba(245,166,35,0.1)',
-          marginBottom: 16, fontSize: 12, fontWeight: 700, color: '#F5A623', letterSpacing: 1,
+          marginBottom: 16, fontSize: 12, fontWeight: 700, color: '#C8A415', letterSpacing: 1,
         }}>
           <Newspaper size={14} /> NEWS &amp; EVENTS
         </div>
@@ -157,7 +157,7 @@ export default function NewsPage() {
           fontWeight: 800, color: '#fff', textAlign: 'center',
         }}>News &amp; Events</h1>
         <p style={{ color: '#94A3B8', fontSize: 16, marginTop: 8, textAlign: 'center', maxWidth: 500 }}>
-          Stay informed with the latest happenings at Angeles State University
+          Stay informed with the latest happenings at Angeles University Foundation
         </p>
       </section>
 
@@ -200,8 +200,8 @@ export default function NewsPage() {
                   padding: '7px 18px', borderRadius: 100,
                   fontSize: 13, fontWeight: 600, cursor: 'pointer',
                   border: active ? 'none' : '1px solid var(--color-border)',
-                  background: active ? '#F5A623' : 'var(--color-surface)',
-                  color: active ? '#0D1B3E' : 'var(--color-text-secondary)',
+                  background: active ? '#C8A415' : 'var(--color-surface)',
+                  color: active ? '#0077B6' : 'var(--color-text-secondary)',
                   transition: 'all 0.2s',
                 }}>{cat}</button>
               )
@@ -213,7 +213,7 @@ export default function NewsPage() {
             <button onClick={() => setExpandedId(null)} style={{
               display: 'inline-flex', alignItems: 'center', gap: 6,
               background: 'none', border: 'none', cursor: 'pointer',
-              color: '#F5A623', fontSize: 14, fontWeight: 600, marginBottom: 16, padding: 0,
+              color: '#C8A415', fontSize: 14, fontWeight: 600, marginBottom: 16, padding: 0,
             }}>
               <ChevronRight size={16} style={{ transform: 'rotate(180deg)' }} /> Back to all articles
             </button>
@@ -383,7 +383,7 @@ export default function NewsPage() {
             borderRadius: 16, padding: 24, position: 'sticky', top: 88,
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
-              <Calendar size={18} color="#F5A623" />
+              <Calendar size={18} color="#C8A415" />
               <h3 style={{ fontSize: 16, fontWeight: 700, fontFamily: 'var(--font-display)' }}>Upcoming Events</h3>
             </div>
 
@@ -408,7 +408,7 @@ export default function NewsPage() {
                     background: 'var(--color-bg)', border: '1px solid var(--color-border)',
                     transition: 'border-color 0.2s',
                   }}
-                    onMouseOver={e => (e.currentTarget.style.borderColor = '#F5A623')}
+                    onMouseOver={e => (e.currentTarget.style.borderColor = '#C8A415')}
                     onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--color-border)')}
                   >
                     <div style={{
@@ -417,8 +417,8 @@ export default function NewsPage() {
                       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                       flexShrink: 0,
                     }}>
-                      <div style={{ fontSize: 10, fontWeight: 700, color: '#F5A623', lineHeight: 1, textTransform: 'uppercase' }}>{month}</div>
-                      <div style={{ fontSize: 18, fontWeight: 800, color: '#F5A623', lineHeight: 1.1 }}>{day}</div>
+                      <div style={{ fontSize: 10, fontWeight: 700, color: '#C8A415', lineHeight: 1, textTransform: 'uppercase' }}>{month}</div>
+                      <div style={{ fontSize: 18, fontWeight: 800, color: '#C8A415', lineHeight: 1.1 }}>{day}</div>
                     </div>
                     <div style={{ minWidth: 0 }}>
                       <div style={{ fontSize: 13, fontWeight: 600, lineHeight: 1.3, marginBottom: 4 }}>{evt.title}</div>
@@ -441,15 +441,15 @@ export default function NewsPage() {
 
       {/* ═══ FOOTER ═══ */}
       <footer style={{
-        background: '#0D1B3E', color: '#94A3B8', padding: '48px 48px 24px',
+        background: '#0077B6', color: '#94A3B8', padding: '48px 48px 24px',
         borderTop: '1px solid rgba(255,255,255,0.06)',
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <GraduationCap size={24} color="#F5A623" />
+              <GraduationCap size={24} color="#C8A415" />
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 16, color: '#fff' }}>
-                Angeles State University
+                Angeles University Foundation
               </span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 300 }}>
@@ -491,7 +491,7 @@ export default function NewsPage() {
           borderTop: '1px solid rgba(255,255,255,0.06)',
           display: 'flex', justifyContent: 'space-between', fontSize: 12,
         }}>
-          <span>&copy; 2026 Angeles State University. All rights reserved.</span>
+          <span>&copy; 2026 Angeles University Foundation. All rights reserved.</span>
           <span>Privacy Policy &middot; Terms of Service</span>
         </div>
       </footer>

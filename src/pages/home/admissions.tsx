@@ -16,15 +16,15 @@ const TIMELINE = [
     step: 1,
     icon: ClipboardList,
     title: 'Submit Application',
-    desc: 'Complete and submit the online application form through the ASU Admissions Portal. Ensure all required fields are filled out accurately.',
+    desc: 'Complete and submit the online application form through the AUF Admissions Portal. Ensure all required fields are filled out accurately.',
     detail: 'Applications are accepted year-round. Priority deadline: May 31 for 1st Semester.',
   },
   {
     step: 2,
     icon: FileText,
     title: 'Entrance Exam',
-    desc: 'Take the ASU College Admission Test (ASUCAT) at the designated testing center on your scheduled date.',
-    detail: 'Schedule: Every Saturday, 8:00 AM — ASU Main Campus, Testing Center Bldg.',
+    desc: 'Take the AUF College Admission Test (ASUCAT) at the designated testing center on your scheduled date.',
+    detail: 'Schedule: Every Saturday, 8:00 AM — AUF Main Campus, Testing Center Bldg.',
   },
   {
     step: 3,
@@ -59,7 +59,7 @@ const REQUIREMENTS = [
       'PSA-authenticated Birth Certificate',
       '2x2 ID photos (4 copies, white background)',
       'Certificate of Good Moral Character',
-      'Completed ASU Application Form',
+      'Completed AUF Application Form',
       'ASUCAT result slip',
     ],
   },
@@ -101,10 +101,10 @@ const TUITION = [
 
 /* ── Scholarships ── */
 const SCHOLARSHIPS = [
-  { name: 'ASU Academic Scholarship', desc: 'Full tuition waiver for students with a GWA of 1.25 or higher. Renewable every semester with maintained standing.', color: '#F5A623' },
+  { name: 'ASU Academic Scholarship', desc: 'Full tuition waiver for students with a GWA of 1.25 or higher. Renewable every semester with maintained standing.', color: '#C8A415' },
   { name: 'Student Assistant Program', desc: 'Part-time campus work (4 hrs/day) in exchange for 100% tuition coverage. Open to all year levels.', color: '#3B82F6' },
   { name: 'CHED Tulong-Dunong', desc: 'Government-funded scholarship for financially disadvantaged but academically capable students.', color: '#22C55E' },
-  { name: 'Athletic Scholarship', desc: 'For varsity athletes who represent ASU in regional and national competitions. Covers tuition and allowance.', color: '#EC4899' },
+  { name: 'Athletic Scholarship', desc: 'For varsity athletes who represent AUF in regional and national competitions. Covers tuition and allowance.', color: '#EC4899' },
 ]
 
 /* ── FAQ ── */
@@ -112,9 +112,9 @@ const FAQ = [
   { q: 'When is the application deadline?', a: 'Applications are accepted year-round, but the priority deadline for 1st Semester AY 2026–2027 is May 31, 2026. Late applications may be considered on a space-available basis.' },
   { q: 'Is there an application fee?', a: 'The ASUCAT entrance exam fee is ₱300. There is no separate application fee for the online form.' },
   { q: 'Can I apply to multiple programs?', a: 'You may indicate a first-choice and a second-choice program on your application form. If you do not qualify for your first choice, you will automatically be considered for the second.' },
-  { q: 'How do I check my admission status?', a: 'You can check your admission status through the ASU Admissions Portal using the reference number provided during application.' },
+  { q: 'How do I check my admission status?', a: 'You can check your admission status through the AUF Admissions Portal using the reference number provided during application.' },
   { q: 'Are there dormitory or housing options?', a: 'ASU offers limited on-campus dormitory spaces on a first-come, first-served basis. Off-campus boarding houses are also available in the vicinity, with rates starting at ₱2,500/month.' },
-  { q: 'Is the campus accessible by public transport?', a: 'Yes. ASU Main Campus is located along a major highway in Angeles City and is accessible via jeepneys, tricycles, and buses from Clark and surrounding areas.' },
+  { q: 'Is the campus accessible by public transport?', a: 'Yes. AUF Main Campus is located along a major highway in Angeles City and is accessible via jeepneys, tricycles, and buses from Clark and surrounding areas.' },
 ]
 
 /* ── Component ── */
@@ -144,15 +144,15 @@ export default function AdmissionsPage() {
       {/* === NAVBAR === */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: '#0D1B3E', color: '#fff',
+        background: '#0077B6', color: '#fff',
         padding: '0 32px', height: 64,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
       }}>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: '#fff' }}>
-          <GraduationCap size={28} color="#F5A623" />
+          <GraduationCap size={28} color="#C8A415" />
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 18 }}>
-            Angeles State University
+            Angeles University Foundation
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
@@ -164,16 +164,16 @@ export default function AdmissionsPage() {
             { label: 'News', href: '/public/news' },
           ].map(item => (
             <Link key={item.label} to={item.href} style={{
-              color: item.label === 'Admissions' ? '#F5A623' : '#CBD5E1',
+              color: item.label === 'Admissions' ? '#C8A415' : '#CBD5E1',
               textDecoration: 'none', fontSize: 14, fontWeight: item.label === 'Admissions' ? 700 : 500,
               transition: 'color 0.2s',
             }}
-              onMouseOver={e => (e.currentTarget.style.color = '#F5A623')}
+              onMouseOver={e => (e.currentTarget.style.color = '#C8A415')}
               onMouseOut={e => { if (item.label !== 'Admissions') e.currentTarget.style.color = '#CBD5E1' }}
             >{item.label}</Link>
           ))}
           <Link to="/login" style={{
-            background: 'linear-gradient(135deg, #F5A623, #FFD280)', color: '#0D1B3E',
+            background: 'linear-gradient(135deg, #C8A415, #FFD280)', color: '#0077B6',
             padding: '8px 20px', borderRadius: 8, fontSize: 13, fontWeight: 700,
             textDecoration: 'none', transition: 'transform 0.2s',
           }}>Student Portal</Link>
@@ -183,7 +183,7 @@ export default function AdmissionsPage() {
       {/* === HERO BANNER === */}
       <section style={{
         position: 'relative', height: 360, overflow: 'hidden',
-        background: 'linear-gradient(135deg, #0D1B3E 0%, #1a2d5a 50%, #0D1B3E 100%)',
+        background: 'linear-gradient(135deg, #0077B6 0%, #1a2d5a 50%, #0077B6 100%)',
       }}>
         <div style={{
           position: 'absolute', inset: 0,
@@ -199,7 +199,7 @@ export default function AdmissionsPage() {
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px',
             borderRadius: 100, border: '1px solid rgba(245,166,35,0.3)', background: 'rgba(245,166,35,0.1)',
-            marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#F5A623', letterSpacing: 1,
+            marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#C8A415', letterSpacing: 1,
           }}>
             <GraduationCap size={14} /> AY 2026–2027
           </div>
@@ -208,7 +208,7 @@ export default function AdmissionsPage() {
             fontWeight: 800, color: '#fff', lineHeight: 1.1, marginBottom: 12,
           }}>Admissions</h1>
           <p style={{ color: '#94A3B8', fontSize: 18, maxWidth: 520, lineHeight: 1.6 }}>
-            Join the ASU community. Begin your journey toward academic excellence and a brighter future.
+            Join the AUF community. Begin your journey toward academic excellence and a brighter future.
           </p>
         </div>
       </section>
@@ -217,7 +217,7 @@ export default function AdmissionsPage() {
       <section style={{ padding: '64px 48px', maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontWeight: 700 }}>Admission Timeline</h2>
-          <p style={{ color: 'var(--color-text-secondary)', fontSize: 14, marginTop: 6 }}>Follow these steps to become an ASU student</p>
+          <p style={{ color: 'var(--color-text-secondary)', fontSize: 14, marginTop: 6 }}>Follow these steps to become an AUF student</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 20 }}>
           {TIMELINE.map((item) => (
@@ -226,14 +226,14 @@ export default function AdmissionsPage() {
               borderRadius: 14, padding: 24, textAlign: 'center', position: 'relative',
               transition: 'all 0.2s',
             }}
-              onMouseOver={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = '#F5A623' }}
+              onMouseOver={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.borderColor = '#C8A415' }}
               onMouseOut={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--color-border)' }}
             >
               <div style={{
                 width: 48, height: 48, borderRadius: '50%',
-                background: 'linear-gradient(135deg, #F5A623, #FFD280)',
+                background: 'linear-gradient(135deg, #C8A415, #FFD280)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                margin: '0 auto 16px', color: '#0D1B3E', fontWeight: 800, fontSize: 18,
+                margin: '0 auto 16px', color: '#0077B6', fontWeight: 800, fontSize: 18,
               }}>
                 {item.step}
               </div>
@@ -243,11 +243,11 @@ export default function AdmissionsPage() {
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 margin: '0 auto 12px',
               }}>
-                <item.icon size={20} color="#F5A623" />
+                <item.icon size={20} color="#C8A415" />
               </div>
               <h3 style={{ fontSize: 15, fontWeight: 700, marginBottom: 8 }}>{item.title}</h3>
               <p style={{ fontSize: 12, color: 'var(--color-text-secondary)', lineHeight: 1.6, marginBottom: 8 }}>{item.desc}</p>
-              <p style={{ fontSize: 11, color: '#F5A623', fontWeight: 600, lineHeight: 1.5 }}>{item.detail}</p>
+              <p style={{ fontSize: 11, color: '#C8A415', fontWeight: 600, lineHeight: 1.5 }}>{item.detail}</p>
             </div>
           ))}
         </div>
@@ -334,7 +334,7 @@ export default function AdmissionsPage() {
                 background: 'var(--color-surface)', border: '1px solid var(--color-border)',
                 borderRadius: 14, padding: 24, transition: 'all 0.2s',
               }}
-                onMouseOver={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = '#F5A623' }}
+                onMouseOver={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.borderColor = '#C8A415' }}
                 onMouseOut={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.borderColor = 'var(--color-border)' }}
               >
                 <div style={{
@@ -343,9 +343,9 @@ export default function AdmissionsPage() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   marginBottom: 14,
                 }}>
-                  <BookOpen size={20} color="#F5A623" />
+                  <BookOpen size={20} color="#C8A415" />
                 </div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: '#F5A623', marginBottom: 4 }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: '#C8A415', marginBottom: 4 }}>
                   {prog.code || prog.abbreviation || ''}
                 </div>
                 <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 4 }}>
@@ -383,7 +383,7 @@ export default function AdmissionsPage() {
                 background: 'var(--color-bg)', border: '1px solid var(--color-border)',
                 borderRadius: 12, padding: 24, transition: 'all 0.2s',
               }}
-                onMouseOver={e => { e.currentTarget.style.borderColor = '#F5A623' }}
+                onMouseOver={e => { e.currentTarget.style.borderColor = '#C8A415' }}
                 onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--color-border)' }}
               >
                 <div style={{
@@ -392,10 +392,10 @@ export default function AdmissionsPage() {
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   marginBottom: 12,
                 }}>
-                  <DollarSign size={18} color="#F5A623" />
+                  <DollarSign size={18} color="#C8A415" />
                 </div>
                 <div style={{ fontSize: 14, fontWeight: 700, marginBottom: 8 }}>{t.program}</div>
-                <div style={{ fontSize: 22, fontWeight: 800, color: '#F5A623', marginBottom: 4 }}>{t.range}</div>
+                <div style={{ fontSize: 22, fontWeight: 800, color: '#C8A415', marginBottom: 4 }}>{t.range}</div>
                 <div style={{ fontSize: 12, color: 'var(--color-text-secondary)' }}>{t.note}</div>
               </div>
             ))}
@@ -457,7 +457,7 @@ export default function AdmissionsPage() {
               const isOpen = expandedFaq === i
               return (
                 <div key={i} style={{
-                  background: 'var(--color-bg)', border: `1px solid ${isOpen ? '#F5A623' : 'var(--color-border)'}`,
+                  background: 'var(--color-bg)', border: `1px solid ${isOpen ? '#C8A415' : 'var(--color-border)'}`,
                   borderRadius: 12, overflow: 'hidden', transition: 'all 0.2s',
                 }}>
                   <button
@@ -469,10 +469,10 @@ export default function AdmissionsPage() {
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                      <HelpCircle size={18} color={isOpen ? '#F5A623' : 'var(--color-text-secondary)'} style={{ flexShrink: 0 }} />
+                      <HelpCircle size={18} color={isOpen ? '#C8A415' : 'var(--color-text-secondary)'} style={{ flexShrink: 0 }} />
                       <span style={{ fontSize: 15, fontWeight: 600 }}>{item.q}</span>
                     </div>
-                    {isOpen ? <ChevronUp size={18} color="#F5A623" /> : <ChevronDown size={18} color="var(--color-text-secondary)" />}
+                    {isOpen ? <ChevronUp size={18} color="#C8A415" /> : <ChevronDown size={18} color="var(--color-text-secondary)" />}
                   </button>
                   <div style={{
                     maxHeight: isOpen ? 200 : 0,
@@ -494,26 +494,26 @@ export default function AdmissionsPage() {
       </section>
 
       {/* === CTA BANNER === */}
-      <section style={{ padding: '64px 48px', background: 'linear-gradient(135deg, #0D1B3E, #1a2d5a)' }}>
+      <section style={{ padding: '64px 48px', background: 'linear-gradient(135deg, #0077B6, #1a2d5a)' }}>
         <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px',
             borderRadius: 100, border: '1px solid rgba(245,166,35,0.3)', background: 'rgba(245,166,35,0.1)',
-            marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#F5A623', letterSpacing: 1,
+            marginBottom: 20, fontSize: 12, fontWeight: 700, color: '#C8A415', letterSpacing: 1,
           }}>
             <GraduationCap size={14} /> START YOUR JOURNEY
           </div>
           <h2 style={{
             fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 800, color: '#fff', marginBottom: 12,
           }}>
-            Ready to <span style={{ color: '#F5A623' }}>Apply</span>?
+            Ready to <span style={{ color: '#C8A415' }}>Apply</span>?
           </h2>
           <p style={{ color: '#94A3B8', fontSize: 16, lineHeight: 1.7, marginBottom: 32 }}>
             Take the first step toward your future. Create an account to start your application for AY 2026–2027. Our admissions team is here to help you every step of the way.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center' }}>
             <Link to="/login" style={{
-              background: 'linear-gradient(135deg, #F5A623, #FFD280)', color: '#0D1B3E',
+              background: 'linear-gradient(135deg, #C8A415, #FFD280)', color: '#0077B6',
               padding: '14px 36px', borderRadius: 10, fontSize: 16, fontWeight: 700,
               textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8,
               boxShadow: '0 4px 20px rgba(245,166,35,0.3)',
@@ -537,15 +537,15 @@ export default function AdmissionsPage() {
 
       {/* === FOOTER === */}
       <footer style={{
-        background: '#0D1B3E', color: '#94A3B8', padding: '48px 48px 24px',
+        background: '#0077B6', color: '#94A3B8', padding: '48px 48px 24px',
         borderTop: '1px solid rgba(255,255,255,0.06)',
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40 }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <GraduationCap size={24} color="#F5A623" />
+              <GraduationCap size={24} color="#C8A415" />
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 16, color: '#fff' }}>
-                Angeles State University
+                Angeles University Foundation
               </span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 300 }}>
@@ -587,7 +587,7 @@ export default function AdmissionsPage() {
           borderTop: '1px solid rgba(255,255,255,0.06)',
           display: 'flex', justifyContent: 'space-between', fontSize: 12,
         }}>
-          <span>&copy; 2026 Angeles State University. All rights reserved.</span>
+          <span>&copy; 2026 Angeles University Foundation. All rights reserved.</span>
           <span>Privacy Policy &middot; Terms of Service</span>
         </div>
       </footer>
